@@ -1,7 +1,7 @@
 require 'make_snippet'
 
-RSpec.describe "takes a string as an argument and returns the first five words" do
-    it "returns the first five words" do
+RSpec.describe "takes a string and returns the first five words if string.length <= 5 or string + ellipses if string.length > 5" do
+    it "returns the first five words if string.length <= 5 or string + ellipses if string.length . 5" do
         result = make_snippet("Hello world, how are you?")
         expect(result).to eq "Hello world, how are you?"
     end
