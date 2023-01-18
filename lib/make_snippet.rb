@@ -3,8 +3,7 @@ def make_snippet(string)
       if words.length <= 5
         return words.join(" ")
       else
-        under_five = words.slice(0, 5)
-        words = under_five.join(" ") + "..."
+        return words.slice(0, 5).join(" ") + "..."
       end
-    return words
+    return words.join(" ")
 end
