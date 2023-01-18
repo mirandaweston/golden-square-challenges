@@ -8,13 +8,11 @@ The user wants to see an estimate of reading time for a text, assuming that they
 
 ## 2. Design the Method Signature
 
-reading_time = estimate_reading_time(text)
-text: a string of words given by the user
+reading_time = estimate_reading_time(text)  
+text: a string of words given by the user  
 reading_time: an integer representing minutes
 
 The method will print the estimate reading time.
-
-```
 
 ## 3. Create Examples as Tests
 
