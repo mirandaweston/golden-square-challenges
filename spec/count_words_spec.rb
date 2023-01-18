@@ -5,4 +5,9 @@ RSpec.describe "takes a string as an argument and returns the number of words in
         words = count_words("I love my dog")
         expect(words).to eq 4
     end
+
+    it "returns 0 if string is empty" do
+        words = count_words("")
+        expect(words).to eq 0
+    end
 end
