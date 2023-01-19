@@ -20,4 +20,9 @@ RSpec.describe "grammar_check method" do
     result = grammar_check("It's sunny today")
     expect(result). to eq false
   end
+
+  it "returns true if text ends with '!' and is capitalized" do
+    result = grammar_check("It's sunny today!")
+    expect(result). to eq true
+  end
 end
