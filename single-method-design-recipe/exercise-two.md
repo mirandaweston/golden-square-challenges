@@ -27,7 +27,7 @@ grammar_check("It's sunny today.") => true
 grammar_check("It's sunny today?") => true
 grammar_check("it's sunny today.") => false
 grammar_check("It's sunny today") => false
-
+grammar_check("It's sunny today!") => true
 
 ```
 
