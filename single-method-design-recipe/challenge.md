@@ -4,16 +4,16 @@
 
 _Put or write the user story here. Add any clarifying notes you might have._
 
-The user wants to keep track of their tasks by checking if a text includes the string #TODO.
+The user wants to keep track of their tasks by checking if a text includes the string #TODO
 
 ## 2. Design the Method Signature
 ```ruby 
 
 is_it_todo = check_todo(text)
-text: a string to pass an argument to check_todo
+text: a string to pass as an argument to check_todo
 is_it_todo is a boolean which shows whether the text includes the string #TODO
 
-#The method will print true or false.
+#The method will return true or false.
 ```
 
 ## 3. Create Examples as Tests
