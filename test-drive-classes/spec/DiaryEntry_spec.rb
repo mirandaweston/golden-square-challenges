@@ -16,4 +16,12 @@ RSpec.describe DiaryEntry do
         @diary_entry = DiaryEntry.new("title", "contents")
         expect(@diary_entry.reading_time(200)).to eq 1
     end
+
+    it "returns a string with a chunk of the contents the user could read in the given number of mins" do
+        @diary_entry = DiaryEntry.new("title", "Lorem Ipsum is simply dummy text of the printing and typesetting industry")
+        expect(@diary_entry.reading_chunk(2,2)).to eq "Lorem Ipsum is simply"
+        expect(@diary_entry.reading_chunk(2,2)).to eq "dummy text of the"
+        expect(@diary_entry.reading_chunk(2,2)).to eq "printing and typesetting industry"
+        expect(@diary_entry.reading_chunk(2,2)).to eq "Lorem Ipsum is simply"
+    end   
 end
