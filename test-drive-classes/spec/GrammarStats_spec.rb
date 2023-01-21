@@ -50,5 +50,15 @@ describe GrammarStats do
             result = grammar_stats.percentage_good
             expect(result).to eq 50
         end
+
+        it "returns 75 if 75% of texts checked so far are capitalized and end with a sentence-ending punctuation mark" do
+            grammar_stats = GrammarStats.new
+            grammar_stats.check("it is sunny today!")
+            grammar_stats.check("It is sunny today!!")
+            grammar_stats.check("It is sunny today?")
+            grammar_stats.check("It is sunny today.")
+            result = grammar_stats.percentage_good
+            expect(result).to eq 75
+        end
     end
 end
