@@ -40,4 +40,15 @@ describe GrammarStats do
             expect(result).to eq false
         end
     end
+
+    context "returns as an integer the percentage of texts checked so far that have passed the check defined in the 'check' method" do
+        #the number 55 represents 55%
+        it "returns 50 if 50% of texts checked so far are capitalized and end with a sentence-ending punctuation mark" do
+            grammar_stats = GrammarStats.new
+            grammar_stats.check("It is sunny today.")
+            grammar_stats.check("it is sunny today")
+            result = grammar_stats.percentage_good
+            expect(result).to eq 50
+        end
+    end
 end
