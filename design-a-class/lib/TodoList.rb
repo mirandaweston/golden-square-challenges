@@ -13,7 +13,7 @@ class TodoList
     end
 
     def is_completed(task)
-        @completed.push(task)
+        @completed << task
         return @tasks - @completed
     end
 end
