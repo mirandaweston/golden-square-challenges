@@ -26,7 +26,7 @@ class DiaryEntry
     def reading_chunk(wpm, minutes)
         total_words = wpm * minutes
         ending_index = @starting_index + total_words
-        @starting_index = 0 if (@starting_index + total_words) > @words.length
+        @starting_index = 0 if ending_index > @words.length
 
         chunk_of_text = @words[@starting_index, total_words].join(" ")
           @starting_index = ending_index
