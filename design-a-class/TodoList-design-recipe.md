@@ -1,6 +1,6 @@
-{{PROBLEM}} Class Design Recipe
+# {{PROBLEM}} Class Design Recipe
 
-1. Describe the Problem
+## 1. Describe the Problem
 
 As a user
 So that I can keep track of my tasks
@@ -10,9 +10,9 @@ As a user
 So that I can focus on tasks to complete
 I want to mark tasks as complete and have them disappear from the list.
 
-2. Design the Class Interface
+## 2. Design the Class Interface
 
-Include the initializer and public methods with all parameters and return values.
+_Include the initializer and public methods with all parameters and return values._
 
 class TodoList
   def initialize
@@ -30,12 +30,11 @@ class TodoList
   end
 end
 
-# EXAMPLE
+## 3. Create Examples as Tests
 
-3. Create Examples as Tests
+_Make a list of examples of how the class will behave in different situations._
 
-Make a list of examples of how the class will behave in different situations.
-
+```ruby
 # EXAMPLE
 
 # 1
