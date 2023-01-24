@@ -23,12 +23,12 @@ _Make a list of examples of what the method will take and return._
 ```ruby
 # EXAMPLE
 
-estimate_reading_time('') => 0
-estimate_reading_time('one') => 1
-estimate_reading_time(TWO_HUNDRED_WORDS) => 1
-estimate_reading_time(SIX_HUNDRED_WORDS) => 3
-estimate_reading_time(SIX_HUNDRED_AND_FIFTY_WORDS) => 3
-estimate_reading_time(ONE_THOUSAND_WORDS) => 5
+estimate_reading_time('') #=> 0
+estimate_reading_time('one') #=> 1
+estimate_reading_time(TWO_HUNDRED_WORDS) #=> 1
+estimate_reading_time(SIX_HUNDRED_WORDS) #=> 3
+estimate_reading_time(SIX_HUNDRED_AND_FIFTY_WORDS) #=> 3
+estimate_reading_time(ONE_THOUSAND_WORDS) #=> 5
 
 ```
 
