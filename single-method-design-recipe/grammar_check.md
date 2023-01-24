@@ -23,11 +23,11 @@ _Make a list of examples of what the method will take and return._
 ```ruby
 # EXAMPLE
 
-grammar_check("It's sunny today.") => true
-grammar_check("It's sunny today?") => true
-grammar_check("it's sunny today.") => false
-grammar_check("It's sunny today") => false
-grammar_check("It's sunny today!") => true
+grammar_check("It's sunny today.") #=> true
+grammar_check("It's sunny today?") #=> true
+grammar_check("it's sunny today.") #=> false
+grammar_check("It's sunny today") #=> false
+grammar_check("It's sunny today!") #=> true
 
 ```
 
