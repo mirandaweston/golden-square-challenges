@@ -23,11 +23,11 @@ _Make a list of examples of what the method will take and return._
 ```ruby
 # EXAMPLE
 
-check_todo("") => false
-check_todo("#TODO write code") => true
-check_todo("food shop #TODO") => true
-check_todo("buy dog food #TODO feed dog") => true
-check_todo("it is raining") => false
+check_todo("") #=> false
+check_todo("#TODO write code") #=> true
+check_todo("food shop #TODO") #=> true
+check_todo("buy dog food #TODO feed dog") #=> true
+check_todo("it is raining") #=> false
 
 ```
 
