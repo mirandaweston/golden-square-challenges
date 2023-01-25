@@ -18,6 +18,6 @@ RSpec.describe Track do
 
     it "returns false when given a keyword which is not present in title or artist" do
         track = Track.new("title_3", "artist_3")
-        expect(track.matches?("title")).to eq false
+        expect(track.matches?("artist_2")).to eq false
     end
 end
