@@ -1,42 +1,25 @@
-require 'diary'
 require 'secret_diary'
+require 'diary'
 
-RSpec.describe "integration" do
-    it "constructs" do
-        secret_diary = SecretDiary.new("diary")
-        diary = Diary.new("contents")
-    end
+RSpec.describe "secret diary integration" do
+  it "raises an error if the diary is locked" do
+    diary = Diary.new("some contents")
+    secret_diary = SecretDiary.new(diary)
+    expect {secret_diary.read}.to raise_error "Go away!"
+  end 
 
-    describe "#read" do
-
-        it "returns the diary's contents if the diary is unlocked" do
-            secret_diary = SecretDiary.new("diary")
-            diary = Diary.new("contents")
-            secret_diary.unlock
-            expect(secret_diary.read).to eq "diary"
-        end
-
-        it "raises the error 'Go away!' if the diary is locked" do
-            secret_diary = SecretDiary.new("diary")
-            diary = Diary.new("contents")
-            secret_diary.lock
-            expect(secret_diary.read).to eq "Go away!"
-        end
-    end
-    
-    describe "#lock" do
-        it "returns true when diary is locked" do
-            secret_diary = SecretDiary.new("diary")
-            diary = Diary.new("diary")
-            expect(secret_diary.lock).to eq true
-        end
-    end
-
-    describe "#unlock" do
-        it "returns false when diary is unlocked" do
-            secret_diary = SecretDiary.new("diary")
-            diary = Diary.new("diary")
-            expect(secret_diary.unlock).to eq false
-        end
-    end
+  it "returns the diary contents if the diary is unlocked" do
+    diary = Diary.new("some contents")
+    secret_diary = SecretDiary.new(diary)
+    secret_diary.unlock
+    expect(secret_diary.read).to eq "some contents"
+  end
+  
+  it "raises an error 'Go away!' when the unlocked diary is locked again" do
+    diary = Diary.new("some contents")
+    secret_diary = SecretDiary.new(diary)
+    secret_diary.unlock
+    secret_diary.lock
+    expect {secret_diary.read}.to raise_error "Go away!"
+  end
 end
