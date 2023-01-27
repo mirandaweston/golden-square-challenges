@@ -8,7 +8,7 @@ class MusicList
     @tracks << track
   end
 
-  def track_list
+  def list
     return @tracks
   end
 end
