@@ -41,7 +41,8 @@ music_list.add => ["track_1"]
 music_list = MusicList.new
 music_list.add("track_1")
 music_list.add("track_2")
-music_list.add => ["track_1", "track_2"]
+music_list.add("track_3")
+music_list.add => ["track_1", "track_2", "track_3"]
 
 # 3
 music_list = MusicList.new
