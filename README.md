@@ -1,4 +1,4 @@
-# The Golden Square Challenges: Phase two
+# The Golden Square Challenges
 
 A series of challenges to aid test-driving, object-oriented design, and debugging practices.
 
