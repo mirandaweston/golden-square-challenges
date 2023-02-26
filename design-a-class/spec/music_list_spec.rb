@@ -10,4 +10,11 @@ RSpec.describe MusicList do
     music_list = MusicList.new
     expect(music_list.list).to eq []
   end
+
+  it "returns a list of all the tracks added to the music list" do
+    music_list = MusicList.new
+    music_list.add("track_1")
+    music_list.add("track_2")
+    expect(music_list.list).to eq ["track_1", "track_2"]
+  end
 end

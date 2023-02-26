@@ -5,5 +5,5 @@ def make_snippet(string)
       else
         return words.slice(0, 5).join(" ") + "..."
       end
-    return words.join(" ")
+    # return words.join(" ")
 end
